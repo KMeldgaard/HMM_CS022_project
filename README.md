@@ -4,6 +4,9 @@ Implementing the Hidden Markov Model algorithm in python. Ultimately to be used 
 All work is based on article by Mark Stamp, Dept. of Computer Science, San José State University.
 
 Authors:
-KMeldgaard,
-Mluchsinger,
+
+KMeldgaard
+
+Mluchsinger
+
 Zalasyu
