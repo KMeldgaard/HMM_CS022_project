@@ -1,20 +1,19 @@
 """ HMM class
     hmm.py - 28-10-2019
     Author: Kasper Meldgaard
-    ###
+    #--#
     HMM class holds a hidden markov model (lambda) parameters.
-    N:  Number of states in model
-    M:  Number of different observations
-    A:  State transition matrix
-    B:  Observation probability matrix
-    pi: initial state
+    -N:  Number of states in model
+    -M:  Number of different observations
+    +A:  State transition matrix
+    +B:  Observation probability matrix
+    +pi: initial state
     """
 
 DEBUG = "DEBUG:"
 
 # package dependencies
 import numpy as np
-# import pandas as pd
 import logging
 
 # DEBUG: on / off
@@ -26,7 +25,7 @@ logging.basicConfig(level=level)
 # -- comment these in/out --#
 A_debug.disabled = True
 B_debug.disabled = True
-pi_debug.disabled = True
+# pi_debug.disabled = True
 
 
 class HMM:
@@ -36,7 +35,7 @@ class HMM:
         self.A = np.array([self.__random_row__(N, A_debug) for i in range(N)])  # add N rows of length N
         A_debug.debug("Array A:\n%s", self.A)  # debug
 
-        self.B = np.array([self.__random_row__(N, B_debug) for i in range(M)])
+        self.B = np.array([self.__random_row__(M, B_debug) for i in range(N)])
         B_debug.debug("Array B:\n%s", self.B)  # debug
 
         self.pi = np.array(self.__random_row__(N, pi_debug))
@@ -64,5 +63,3 @@ class HMM:
 
 # test class:
 model = HMM(2, 27);
-
-# model.__random_row__(27)
