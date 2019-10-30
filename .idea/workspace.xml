@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70b8349b-c55c-452d-a675-c9876df1e632" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/first_implementation_from_paper/hmm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,7 +52,8 @@
       <workItem from="1571792430267" duration="12000" />
       <workItem from="1571860412193" duration="293000" />
       <workItem from="1571953062336" duration="716000" />
-      <workItem from="1572291950191" duration="1420000" />
+      <workItem from="1572291950191" duration="2650000" />
+      <workItem from="1572404328424" duration="61000" />
     </task>
     <task id="LOCAL-00001" summary="Testing pycharm with github">
       <created>1571860521538</created>
@@ -76,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571953399297</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="file to hold the model-class added">
+      <created>1572295354104</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572295354104</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,6 +106,7 @@
     <MESSAGE value="Testing pycharm with github" />
     <MESSAGE value="removed test_file" />
     <MESSAGE value="Added files to contain functions of the translated pseodocode from article by Mark Stamp." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added files to contain functions of the translated pseodocode from article by Mark Stamp." />
+    <MESSAGE value="file to hold the model-class added" />
+    <option name="LAST_COMMIT_MESSAGE" value="file to hold the model-class added" />
   </component>
 </project>
