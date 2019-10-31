@@ -2,7 +2,8 @@
     observation.py - 30-10-2019
     Author: Kasper Meldgaard
     #
-    observations are mapped to integers to represent them acording to a lookup table"""
+    Observations are mapped to integers to represent them acording to a lookup table.
+    obs: observation sequence mapped ti integers"""
 
 import numpy as np
 
@@ -16,6 +17,10 @@ class latin_observations:
         # print(i_str)    # debug
         # map input characters to integers
         self.obs = np.array(list(map(lambda i: (ord(i) - 97) if ord(i) in list(range(97, 123)) else 27, i_str)))
+        self.num_obs = len(self.obs)
+
+    def get_num_obs(self):
+        return self.num_obs
 
     def get_clear_text(self):
         # TODO
