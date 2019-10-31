@@ -17,14 +17,15 @@ import logging
 
 def alpha_pass(model, O):
     alpha = np.zeros((model.get_N, len(O)))  # initialize alpha matrix
-    c0 = 0
+    # c0 = 0
+    c = np.zeros(len(O))    # initialize c array with zeros
     # compute first row:
     for n in range(model.get_N):
         alpha[0, n] = model.pi[n] * model.B[O[0], n]
-        c0 += alpha[0, n]
+        c[0] += alpha[0, n]
     # compute rest of alpha rows
     for t in range(1, (len(O) - 1)):
-        ct = 0
+        # ct = 0
         for n in range(model.get_N):  # denoted i in paper
             alpha[t, n] = 0
             for i in range(model.get_N):  # denoted j in paper
@@ -37,4 +38,4 @@ def alpha_pass(model, O):
             alpha[t, n] *= ct
             # end scale
 
-    return alpha
+    return alpha, c
