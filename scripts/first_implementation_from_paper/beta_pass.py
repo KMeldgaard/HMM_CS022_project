@@ -1,17 +1,30 @@
-""" Beta_pass funtion for HMM
-    beta_pass.py - 24-10-2019
-    Author: Kasper Meldgaard"""
-# Given Model lambda and an observation sequence,
-# find an optimal state sequence --> uncover the hidden part of the HMM
+"""
+    Beta_pass funtion for HMM
+    beta_pass.py - 11-06-2019
+    Author: Kasper Meldgaard
 
+    #--#
+    function to complete the beta pass.
+    --> also known as the backward algorithm.
+
+    Given Model lambda and an observation sequence,
+    finds an optimal state sequence --> uncover the hidden part of the HMM
+    #--#
+    :param
+    model:      The current HMM model object
+    obs_seq:    observation sequence object
+    c:          row-vector to scale the values
+                (solution for the underflow problem --> converging to 0 exponentially as T increases)
+    :return
+    beta:       beta matrix
+"""
 
 import numpy as np
 
-# C_t hast to be passed on from alpha pass?
 def beta_pass(model, obs_seq, c):
     beta = np.zeros((model.get_N(), obs_seq.get_num_obs()))
 
-    # set all elements of last row to = 1
+    # set all elements of last row to scaled value c[t-1]
     # WHY? NO CLUE YET
     for n in range(model.get_N()):    # n denoted i in paper
         # Scaled values assigned to last row
@@ -24,7 +37,7 @@ def beta_pass(model, obs_seq, c):
             for i in range(start=0, stop=model.get_N()):  # i denoted j in paper
                 beta[t, n] = beta[t, n] + model.A[n, i] * model.B[i, obs_seq.obs[t+1]] * beta[t+1, i]
 
-            # Scaling Beta[t,n] with same scale as alpha[t,n]
+            # Scaling Beta[t,n] with same scale c as alpha[t,n]
             beta[t, n] = c[t] * beta[t, n]
 
     return(beta)
