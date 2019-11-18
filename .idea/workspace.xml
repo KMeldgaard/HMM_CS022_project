@@ -4,7 +4,6 @@
     <list default="true" id="70b8349b-c55c-452d-a675-c9876df1e632" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/first_implementation_from_paper/alpha_pass.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/first_implementation_from_paper/alpha_pass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/first_implementation_from_paper/observation.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/first_implementation_from_paper/observation.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +133,10 @@
       <workItem from="1572404328424" duration="61000" />
       <workItem from="1572452998721" duration="9815000" />
       <workItem from="1572495708550" duration="2346000" />
-      <workItem from="1572545785181" duration="520000" />
+      <workItem from="1572545785181" duration="1378000" />
+      <workItem from="1572897366700" duration="28000" />
+      <workItem from="1572897462682" duration="261000" />
+      <workItem from="1573070659545" duration="65000" />
     </task>
     <task id="LOCAL-00001" summary="Testing pycharm with github">
       <created>1571860521538</created>
@@ -192,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572498029849</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="alpha-pass touch-up: Now supports the observation object.&#10;&#10;Observation class touch-up: explanation and able to return number of observations in sequence.">
+      <created>1572546395509</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1572546395509</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,7 +229,8 @@
     <MESSAGE value="Finished HMM class" />
     <MESSAGE value="touched up on hmm-class. alpha_pass mods, created obeservation class" />
     <MESSAGE value="alpha-pass now return c-array.&#10;&#10;observation object takes a text file as input and contain a numpy array with input mapped to integers 0..27 (incl. ' ')." />
-    <option name="LAST_COMMIT_MESSAGE" value="alpha-pass now return c-array.&#10;&#10;observation object takes a text file as input and contain a numpy array with input mapped to integers 0..27 (incl. ' ')." />
+    <MESSAGE value="alpha-pass touch-up: Now supports the observation object.&#10;&#10;Observation class touch-up: explanation and able to return number of observations in sequence." />
+    <option name="LAST_COMMIT_MESSAGE" value="alpha-pass touch-up: Now supports the observation object.&#10;&#10;Observation class touch-up: explanation and able to return number of observations in sequence." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HMM_CS022_project$observation.coverage" NAME="observation Coverage Results" MODIFIED="1572497922640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/first_implementation_from_paper" />
