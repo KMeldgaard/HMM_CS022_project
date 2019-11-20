@@ -1,7 +1,7 @@
 """
     Beta_pass funtion for HMM
     beta_pass.py - 11-06-2019
-    Author: Kasper Meldgaard
+    Author: Maximiliano Luchsinger
 
     #--#
     function to complete the beta pass.
