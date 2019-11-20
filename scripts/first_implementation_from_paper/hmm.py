@@ -25,7 +25,7 @@ logging.basicConfig(level=level)
 # -- comment these in/out --#
 A_debug.disabled = True
 B_debug.disabled = True
-# pi_debug.disabled = True
+pi_debug.disabled = True
 
 
 class HMM:
@@ -44,9 +44,14 @@ class HMM:
     def __random_row__(self, l, row_debug):
         """Creates a row of l numbers with value normally distributed around 1/l"""
         while True:
-            row = np.random.normal(loc=1 / l, scale=0.05,
+            row = np.random.normal(loc=1 / l, scale=0.015,
                                    size=(l - 1))  # normally distribute values around 1/l except last value
             row_debug.debug("Row before last elem: %s", row)  # debug
+            for elem in row.tolist():
+                # print(elem)
+                if elem < 0:
+                    # print("continue")
+                    continue
             row = np.append(row, 1 - np.sum(row))  # add the last element and ensure row sums to 1 (stochastic row)
             row_debug.debug("Row after last elem: %s", row)  # debug
             row_debug.debug("Sum of row: %s", sum(row))  # debug

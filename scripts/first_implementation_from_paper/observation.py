@@ -8,7 +8,7 @@
 import numpy as np
 
 
-class latin_observations:
+class Latin_observations:
     def __init__(self, input_path=""):
         file = open(input_path)
         i_str = file.read().replace("\n", ' ')
@@ -36,5 +36,5 @@ class latin_observations:
     #         return " "
 
 
-o = latin_observations("test_text.txt")
-print(o.obs)
+o = Latin_observations("test_text.txt")
+# print(o.obs)
