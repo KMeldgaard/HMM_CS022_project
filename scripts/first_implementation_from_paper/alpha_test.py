@@ -12,3 +12,9 @@ model = HMM(2, 27);
 
 # attempt an alpha-pass
 alpha, c = alpha_pass(model, obs)
+
+# debug prints
+print("Model:\nA:\n", model.A, "\nB:\n", model.B, "\npi:\n", model.pi)
+print("Observations:\nSequence:\n", obs.obs, "\n# of obs:", obs.num_obs)
+print("Alpha matrix:\n", alpha)
+print("c vector:\n", c)
