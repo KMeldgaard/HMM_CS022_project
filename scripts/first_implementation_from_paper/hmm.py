@@ -24,7 +24,7 @@ level = logging.DEBUG
 logging.basicConfig(level=level)
 # -- comment these in/out --#
 A_debug.disabled = True
-# B_debug.disabled = True
+B_debug.disabled = True
 pi_debug.disabled = True
 
 
@@ -50,7 +50,7 @@ class HMM:
             for elem in row.tolist():
                 # print(elem)
                 if elem < 0:
-                    print("continue")
+                    # print("continue")
                     continue
             row = np.append(row, 1 - np.sum(row))  # add the last element and ensure row sums to 1 (stochastic row)
             row_debug.debug("Row after last elem: %s", row)  # debug
