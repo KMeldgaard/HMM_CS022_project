@@ -28,22 +28,25 @@ def alpha_pass(model, obs_seq):
         alpha[0, n] = model.pi[n] * model.B[n, obs_seq.obs[0]]
         c[0] += alpha[0, n]
 
-    # TODO Scale alpha_0(i)
+    # Scale alpha_0(i)
+    c[0] = 1/c[0]
+    for i in range(obs_seq.get_num_obs()):
+        alpha[0, i] *= c[0]
 
     # compute rest of alpha/c rows
-    for t in range(1, (obs_seq.get_num_obs() - 1)):     # possible remove the '-1'
+    for t in range(1, (obs_seq.get_num_obs())):     # possible remove the '-1'
         # ct = 0
-        for n in range(model.get_N()):  # n denoted i in paper
-            alpha[n, t] = 0
-            for i in range(model.get_N()):  # denoted j in paper
-                alpha[n, t] += alpha[t - 1, i] * model.A[i, n]
-            alpha[n, t] *= model.B[n, obs_seq.obs[t]]
-            c[t] += alpha[t, n]
+        for i in range(model.get_N()):  # i in paper
+            alpha[i, t] = 0
+            for j in range(model.get_N()):  # denoted j in paper
+                alpha[i, t] += alpha[j, t - 1] * model.A[j, i]
+            alpha[i, t] *= model.B[i, obs_seq.obs[t]]
+            c[t] += alpha[i, t]
 
-        # scale alpha:
+        # scale alpha_t(i):
         c[t] = 1 / c[t]
-        for n in range(model.get_N()):
-            alpha[t, n] *= c[t]
+        for i in range(model.get_N()):
+            alpha[i, t] *= c[t]
             # end scale
 
     return alpha, c

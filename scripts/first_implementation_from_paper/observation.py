@@ -17,7 +17,7 @@ class Latin_observations:
         # print(i_str)    # debug
         # map input characters to integers
         self.obs = np.array(list(map(lambda i: (ord(i) - ord('a')) if ord(i) in list(range(ord('a'),\
-                                                                                           (ord('z')+1))) else 27, i_str)))
+                                                                                           (ord('z')+1))) else 26, i_str)))
         self.num_obs = len(self.obs)
 
     def get_num_obs(self):
@@ -36,6 +36,6 @@ class Latin_observations:
     #     else:   # a special character like ':' or '.'
     #         return " "
 
-
+# test
 o = Latin_observations("test_text.txt")
-print(o.obs)
+# print(o.obs)
