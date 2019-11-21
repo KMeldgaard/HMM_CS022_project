@@ -66,5 +66,16 @@ class HMM:
         return self.__M__
 
 
+""" Negative probability exception
+    To ensure the model is initialized correctly"""
+class Neg_prob_Error(Exception):
+    __DESCRIPTION__ = "A negative value was encountered!"
+
+""" Function to check if an elem is negative"""
+def check_neg_pro(elem):
+    if elem < 0.0:
+        raise Neg_prob_Error
+    return
+
 # test class:
 model = HMM(2, 27);

@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70b8349b-c55c-452d-a675-c9876df1e632" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/HMM_CS022_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HMM_CS022_project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/first_implementation_from_paper/alpha_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/first_implementation_from_paper/alpha_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/first_implementation_from_paper/hmm.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/first_implementation_from_paper/hmm.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +167,7 @@
       <workItem from="1574227400580" duration="1936000" />
       <workItem from="1574237600858" duration="1460000" />
       <workItem from="1574279848115" duration="1198000" />
-      <workItem from="1574281206364" duration="7224000" />
+      <workItem from="1574281206364" duration="7636000" />
     </task>
     <task id="LOCAL-00001" summary="Testing pycharm with github">
       <created>1571860521538</created>
@@ -269,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574293778266</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Minor changes to debug print in alpha-test.">
+      <created>1574364225452</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1574364225452</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,17 +308,11 @@
     <MESSAGE value="Created test for alpha pass.&#10;Minor changes to alpha-pass." />
     <MESSAGE value="Minor change to observation __init__.&#10;using ord-values instead of integers." />
     <MESSAGE value="Alpha pass now runs without Exceptions.&#10;Have NOT checked logical errors!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alpha pass now runs without Exceptions.&#10;Have NOT checked logical errors!" />
+    <MESSAGE value="Minor changes to debug print in alpha-test." />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor changes to debug print in alpha-test." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/scripts/first_implementation_from_paper/alpha_pass.py</url>
-          <line>42</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
