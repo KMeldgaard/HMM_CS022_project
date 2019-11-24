@@ -4,8 +4,9 @@
 
 from hmm import HMM
 from observation import Latin_observations
-from alpha_pass import alpha_pass
+from alpha_pass_Copy_With_Changes import alpha_pass
 from beta_pass import beta_pass
+from log_prob import  compute_logprob
 
 # setup objects
 obs = Latin_observations("test_text.txt")
@@ -22,8 +23,12 @@ print("c vector:\n", c)
 
 
 
-
 # ----------------------------- BETA-PASS TEST ----------------------------------------------------
 beta = beta_pass(model, obs, c)
 # debug prints
 print("Beta matrix:\n", beta)
+
+
+
+# ----------------------------- Computing the log prob TEST ---------------------------------------
+print(compute_logprob(obs, c))
