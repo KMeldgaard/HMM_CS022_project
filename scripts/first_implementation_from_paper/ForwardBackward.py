@@ -83,7 +83,7 @@ for state s and observation t
 # Also it is normalized. due to scaling block.....
 # The denominator can be computed in many different ways, all producing the same result.
 
-def Forward_Backward(N, alpha, beta):
+def Forward_Backward(N, alpha, beta, test_sequence, sequence_syms, transition, emission, states_dict):
     """Expectation Step"""
 
     # Initialize denominator:

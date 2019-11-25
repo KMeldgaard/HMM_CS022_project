@@ -4,7 +4,7 @@
 
 from hmm import HMM
 from observation import Latin_observations
-from alpha_pass import alpha_pass
+from alpha_pass_Copy_With_Changes import alpha_pass
 
 # setup objects
 obs = Latin_observations("test_text.txt")
