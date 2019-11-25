@@ -83,7 +83,7 @@ for state s and observation t
 # Also it is normalized. due to scaling block.....
 # The denominator can be computed in many different ways, all producing the same result.
 
-def Forward_Backward(N, alpha, beta, test_sequence, sequence_syms, transition, emission, states_dict):
+def Forward_Backward(N, alpha, beta, test_sequence, sequence_syms, transition, emission):
     """Expectation Step"""
 
     # Initialize denominator:
@@ -123,7 +123,7 @@ def Forward_Backward(N, alpha, beta, test_sequence, sequence_syms, transition, e
 
     for s in range(N):
         denominator = sum([gamma[s, t] for t in range(len(test_sequence))])
-        for vocab_item, obs_index in states_dic.items():
+        for vocab_item, obs_index in sequence_syms.items():
             emis[s, obs_index] = sum(
                 [gamma[s, t] for t in range(len(test_sequence)) if test_sequence[t] == vocab_item]) / denominator
 

@@ -23,6 +23,9 @@ class Latin_observations:
     def get_num_obs(self):
         return self.num_obs
 
+    def __len__(self):
+        return len(self.obs)
+
     def get_clear_text(self):
         # TODO
         pass
