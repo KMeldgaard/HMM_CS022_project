@@ -41,12 +41,29 @@ class HMM:
         self.pi = np.array(self.__random_row__(N, pi_debug))
         pi_debug.debug("pi: %s", self.pi)
 
+        # double-check the rows
+        try:
+            for i in range(N):
+                for e in self.A[i]:
+                    check_neg_pro(e)
+                for e in self.B[i]:
+                    check_neg_pro(e)
+        except Neg_prob_Error as ex:
+            print(ex.__DESCRIPTION__)
+            exit(1)
+
+
     def __random_row__(self, l, row_debug):
         """Creates a row of l numbers with value normally distributed around 1/l"""
         while True:
-            row = np.random.normal(loc=1 / l, scale=0.015,
-                                   size=(l - 1))  # normally distribute values around 1/l except last value
+            # TODO fix the distribution!!!
+            # TODO np.random.uniform(low=, high=0, size=)
+            # row = np.random.normal(loc=1 / l, scale=0.015, \
+                                   # size=(l - 1))  # normally distribute values around 1/l except last value
+            row = np.random.uniform(low=0.0, high= 2 / l, size=(l-1))
             row_debug.debug("Row before last elem: %s", row)  # debug
+            if np.sum(row) > 1.0:
+                continue
             for elem in row.tolist():
                 # print(elem)
                 if elem < 0:
@@ -78,4 +95,5 @@ def check_neg_pro(elem):
     return
 
 # test class:
-model = HMM(2, 27);
+model = HMM(2, 27)
+print("Model:\nA:\n", model.A, "\nB:\n", model.B, "\npi:\n", model.pi)

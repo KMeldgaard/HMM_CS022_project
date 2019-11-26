@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70b8349b-c55c-452d-a675-c9876df1e632" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/first_implementation_from_paper/first_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/HMM_CS022_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HMM_CS022_project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/first_implementation_from_paper/ForwardBackward.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/first_implementation_from_paper/ForwardBackward.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/first_implementation_from_paper/alpha_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/first_implementation_from_paper/alpha_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/first_implementation_from_paper/hmm.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/first_implementation_from_paper/hmm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/first_implementation_from_paper/observation.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/first_implementation_from_paper/observation.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +26,13 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/scripts/first_implementation_from_paper" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\acer\Documents\Machine_Learning\HMM_CS022_project\scripts\first_implementation_from_paper" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -44,29 +46,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.first_test">
-    <configuration name="alpha_pass" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="HMM_CS022_project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/first_implementation_from_paper" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/first_implementation_from_paper/alpha_pass.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.kaspers_shady_first_test">
     <configuration name="alpha_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="HMM_CS022_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -133,7 +113,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="observation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="kaspers_shady_first_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="HMM_CS022_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -146,7 +126,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/first_implementation_from_paper/observation.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/first_implementation_from_paper/kaspers_shady_first_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="kaspers_super_shady_shit" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="HMM_CS022_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/first_implementation_from_paper" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/first_implementation_from_paper/kaspers_super_shady_shit.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -157,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.kaspers_shady_first_test" />
+        <item itemvalue="Python.hmm" />
+        <item itemvalue="Python.kaspers_super_shady_shit" />
         <item itemvalue="Python.first_test" />
         <item itemvalue="Python.alpha_test" />
-        <item itemvalue="Python.alpha_pass" />
-        <item itemvalue="Python.observation" />
-        <item itemvalue="Python.hmm" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +199,7 @@
       <workItem from="1574281206364" duration="7726000" />
       <workItem from="1574663249864" duration="861000" />
       <workItem from="1574712239265" duration="927000" />
-      <workItem from="1574715448357" duration="2119000" />
+      <workItem from="1574715448357" duration="11615000" />
     </task>
     <task id="LOCAL-00001" summary="Testing pycharm with github">
       <created>1571860521538</created>
@@ -311,7 +313,21 @@
       <option name="project" value="LOCAL" />
       <updated>1574364627300</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added a few chnges to Forward_Backward.&#10;&#10;Start to implement the whole thing.">
+      <created>1574718415587</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1574718415587</updated>
+    </task>
+    <task id="LOCAL-00018" summary="A non-working 1st implement.">
+      <created>1574720018930</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1574720018930</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,10 +363,19 @@
     <MESSAGE value="Alpha pass now runs without Exceptions.&#10;Have NOT checked logical errors!" />
     <MESSAGE value="Minor changes to debug print in alpha-test." />
     <MESSAGE value="Added support exception/function to check negative probabilities." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added support exception/function to check negative probabilities." />
+    <MESSAGE value="Added a few chnges to Forward_Backward.&#10;&#10;Start to implement the whole thing." />
+    <MESSAGE value="A non-working 1st implement." />
+    <option name="LAST_COMMIT_MESSAGE" value="A non-working 1st implement." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/scripts/first_implementation_from_paper/kaspers_super_shady_shit.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -362,9 +387,11 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HMM_CS022_project$observation.coverage" NAME="observation Coverage Results" MODIFIED="1574281512710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/first_implementation_from_paper" />
-    <SUITE FILE_PATH="coverage/HMM_CS022_project$hmm.coverage" NAME="hmm Coverage Results" MODIFIED="1574280545159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/first_implementation_from_paper" />
+    <SUITE FILE_PATH="coverage/HMM_CS022_project$kaspers_super_shady_shit.coverage" NAME="kaspers_super_shady_shit Coverage Results" MODIFIED="1574807986060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/first_implementation_from_paper" />
+    <SUITE FILE_PATH="coverage/HMM_CS022_project$hmm.coverage" NAME="hmm Coverage Results" MODIFIED="1574809895683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/first_implementation_from_paper" />
+    <SUITE FILE_PATH="coverage/HMM_CS022_project$kaspers_shady_first_test.coverage" NAME="kaspers_shady_first_test Coverage Results" MODIFIED="1574809911314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/first_implementation_from_paper" />
     <SUITE FILE_PATH="coverage/HMM_CS022_project$alpha_pass.coverage" NAME="alpha_pass Coverage Results" MODIFIED="1574290986663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/first_implementation_from_paper" />
-    <SUITE FILE_PATH="coverage/HMM_CS022_project$first_test.coverage" NAME="first_test Coverage Results" MODIFIED="1574716638223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/first_implementation_from_paper" />
+    <SUITE FILE_PATH="coverage/HMM_CS022_project$first_test.coverage" NAME="first_test Coverage Results" MODIFIED="1574721587091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/first_implementation_from_paper" />
     <SUITE FILE_PATH="coverage/HMM_CS022_project$alpha_test.coverage" NAME="alpha_test Coverage Results" MODIFIED="1574663481799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/first_implementation_from_paper" />
   </component>
 </project>
