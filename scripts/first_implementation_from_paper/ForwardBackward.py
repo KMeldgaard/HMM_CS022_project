@@ -80,7 +80,7 @@ def Forward_Backward(N, alpha, beta, test_sequence, sequence_syms, transition, e
 
     # Computing gamma. To adjust the model parameters to best fit the observations.
     # Gamma_t(i) = sum(gamma(i,j)
-    gamma = np.zeros((N + 2, len(test_sequence)))
+    gamma = np.zeros((N +2, len(test_sequence)))
     for t in range(len(test_sequence) - 1):
         for s_i in range(N):
             gamma[s_i, t] = sum([di_gamma[t][s_i, s_j] for s_j in range(N)])

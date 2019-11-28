@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70b8349b-c55c-452d-a675-c9876df1e632" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/HMM_CS022_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HMM_CS022_project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/first_implementation_from_paper/ForwardBackward.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/first_implementation_from_paper/ForwardBackward.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/first_implementation_from_paper/alpha_pass_Copy_With_Changes.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/first_implementation_from_paper/alpha_pass_Copy_With_Changes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/first_implementation_from_paper/observation.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/first_implementation_from_paper/observation.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -313,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574364627300</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added support exception/function to check negative probabilities.">
+      <created>1574911850074</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1574911850074</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
