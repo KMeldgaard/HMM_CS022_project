@@ -99,7 +99,7 @@ def Forward_Backward(N, alpha, beta, test_sequence, sequence_syms, transition, e
         denominator = sum([gamma[s, t] for t in range(len(test_sequence))])
         for vocab_item, obs_index in sequence_syms.items():
             emis[s, obs_index] = sum(
-                [gamma[s, t] for t in range(len(test_sequence)) if test_sequence[t] == vocab_item]) / denominator
+                [gamma[s, t] for t in range(len(test_sequence)) if sequence_syms[t] == vocab_item]) / denominator
 
     # re-estimate transition probabilities
     trans = np.zeros((N, N))
