@@ -19,6 +19,9 @@ from alpha_pass_Copy_With_Changes import alpha_pass
 from beta_pass import beta_pass
 from log_prob import compute_logprob
 from ForwardBackward import Forward_Backward
+import logging
+mpl_logger = logging.getLogger('matplotlib')
+mpl_logger.setLevel(logging.WARNING)
 
 # Initialize calculation
 max_iteration = 1000
