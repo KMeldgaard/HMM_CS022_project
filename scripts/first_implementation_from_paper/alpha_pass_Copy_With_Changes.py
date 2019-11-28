@@ -6,9 +6,11 @@
     --> also known as the forward algorithm.
     Returns the probability of a partial observation sequence (upto time t=[0...T-1])
     #--#
+
     :param
     model:      the current HMM model object
     obs_seq:    observation sequence object
+
     :return
     alpha:  the matrix describing how good the current model fit the obs_seq
     c:      row-vector of some constant to be used in beta-pass

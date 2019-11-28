@@ -16,8 +16,9 @@ class Latin_observations:
         i_str = i_str.lower()
         # print(i_str)    # debug
         # map input characters to integers
-        self.obs = np.array(list(map(lambda i: (ord(i) - ord('a')) if ord(i) in list(range(ord('a'),\
-                                                                                           (ord('z')+1))) else 26, i_str)))
+        self.obs = np.array(list(map(lambda i: (ord(i) - ord('a')) if ord(i) in list(range(ord('a'), \
+                                                                                           (ord('z') + 1))) else 26,
+                                     i_str)))
         self.num_obs = len(self.obs)
 
     def get_num_obs(self):
@@ -30,15 +31,7 @@ class Latin_observations:
         # TODO
         pass
 
-    # def __map_input__(self, input):
-    #     look_up = {'a': 0, 'b': 1, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 'i': 9, \
-    #                'j': 10, 'k': 11, 'l': 12, 'm': 13, 'n': 14, 'o': 15, 'p': 16, 'q': 17,
-    #                'r': 18, 's': 19, 't': 20, 'u': 21, 'v': 22, 'w': 23, 'x':24, 'y': 25, 'z': 26, ' ': 27}
-    #     if input in look_up.keys():
-    #         return look_up[input]
-    #     else:   # a special character like ':' or '.'
-    #         return " "
 
 # test
 o = Latin_observations("test_text.txt")
-# print(o.obs)
+print(o.obs)

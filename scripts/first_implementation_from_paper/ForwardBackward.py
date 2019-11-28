@@ -17,37 +17,11 @@ i = S_i (present state)
 j = S_j (state after transition)
 """
 """Used to understand our raw inputs."""
-# transition probabilities
-transition = np.array([[0.46, 0.54],
-                       [0.52, 0.48]])
-# Emission probabilities
-emission = np.random.normal(loc=1 / 27, scale=0.5, size=(2, 27))
-print(emission)
-# defining states and sequence symbols
-states = ['V', 'C']
-states_dic = {'V': 0, 'C': 1}
-sequence_syms = {
-    'a': 0, 'o': 1, 'u': 2, 'i': 3, 'e': 4, 'y': 5, 'b': 6, 'c': 7, 'd': 8, 'f': 9, 'g': 10, 'h': 11, 'j': 12,
-    'k': 13, 'l': 14, 'm': 15, 'n': 16, 'p': 17, 'q': 18, 'r': 19, 's': 20, 't': 21, 'v': 22, 'x': 23, 'z': 24, 'w': 25,
-    ' ': 26}
-
-sequence = ['a,', 'o', 'u', 'i', 'e', 'y', 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p',
-            'q', 'r', 's', 't', 'v', 'w' 'x', 'z', ' ']
-
-# test sequence
-test_sequence = 'glhgaeiproekrertgdqth'
-test_sequence = [x for x in test_sequence]
-
-# probabilities of going to end state
-end_probs = [0.52, 0.48]
-# probabilities of going from start state
-start_probs = [0.52, 0.48]
-
+# From Kasper Observation sequence (Implicit conversion
 """
 emission probabilities: numpy matrix of shape (N, |V|) (where |V| is the size of the vocabulary)
 where entry (j, o) has emis_j(o).
-
-transition probablities: numpy matrix of shape (N, N) where entry (i, j) has trans(i, j).
+    
 
 forward and backward probabilities: numpy matrix of shape (N, T) where entry (s, t) has forward probability
 for state s and observation t
@@ -95,7 +69,7 @@ def Forward_Backward(N, alpha, beta, test_sequence, sequence_syms, transition, e
     # transiting to state s_j at time t=1
     # Computing di_gamma
     for t in range(len(test_sequence) - 1):  # Creates index list
-        obs_idx = sequence_syms[t + 1]
+        obs_idx = test_sequence[t + 1]
         Z_t = np.zeros((N, N))
 
         for s_i in range(N):
