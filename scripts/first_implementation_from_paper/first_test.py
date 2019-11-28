@@ -13,6 +13,7 @@ sequence_syms = {
 # import all the shit
 import numpy as np
 from hmm import HMM
+from matplotlib import pyplot
 from observation import Latin_observations
 from alpha_pass_Copy_With_Changes import alpha_pass
 from beta_pass import beta_pass
@@ -20,12 +21,13 @@ from log_prob import compute_logprob
 from ForwardBackward import Forward_Backward
 
 # Initialize calculation
-max_iteration = 10
+max_iteration = 1000
 old_log_prob = -float('inf')
 log_prob_history = np.array(old_log_prob, dtype=float)
 
 model = HMM(2,27)
 obs = Latin_observations('test_text.txt')
+init_model = model
 
 for iteration in range(max_iteration):
     # alpha pass
@@ -51,7 +53,12 @@ for iteration in range(max_iteration):
         old_log_prob = new_log_prob
         continue
     else:
+        print("STOPPED AT ITERATION:", iteration)
         break
 
 # view some results:
+print("Model:\nA:\n", init_model.A, "\nB:\n", init_model.B, "\npi:\n", init_model.pi)
 print("Model:\nA:\n", model.A, "\nB:\n", model.B, "\npi:\n", model.pi)
+
+pyplot.plot(range(len(log_prob_history)), log_prob_history.tolist())
+pyplot.show()

@@ -56,8 +56,6 @@ class HMM:
     def __random_row__(self, l, row_debug):
         """Creates a row of l numbers with value normally distributed around 1/l"""
         while True:
-            # TODO fix the distribution!!!
-            # TODO np.random.uniform(low=, high=0, size=)
             # row = np.random.normal(loc=1 / l, scale=0.015, \
                                    # size=(l - 1))  # normally distribute values around 1/l except last value
             row = np.random.uniform(low=0.0, high= 2 / l, size=(l-1))
@@ -96,4 +94,4 @@ def check_neg_pro(elem):
 
 # test class:
 model = HMM(2, 27)
-print("Model:\nA:\n", model.A, "\nB:\n", model.B, "\npi:\n", model.pi)
+# print("Model:\nA:\n", model.A, "\nB:\n", model.B, "\npi:\n", model.pi)
