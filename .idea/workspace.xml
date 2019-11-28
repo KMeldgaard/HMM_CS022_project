@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="70b8349b-c55c-452d-a675-c9876df1e632" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/scripts/first_implementation_from_paper/ForwardBackward.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/first_implementation_from_paper/ForwardBackward.py" afterDir="false" />
-    </list>
+    <list default="true" id="70b8349b-c55c-452d-a675-c9876df1e632" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574911850074</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added support exception/function to check negative probabilities.">
+      <created>1574912028385</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1574912028385</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
