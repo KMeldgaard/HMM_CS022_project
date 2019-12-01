@@ -1,0 +1,44 @@
+We live in a wireless world! All the technologies and standards that have been
+released in the past five years, along with the ones that will be released between now and
+2020, means that almost everything we do—every aspect of our lives—has a wireless component.
+In fact, wireless data communication is omnipresent today—in the cordless phones
+we use in our homes and offices, in the over 6 billion cellular phones that roam the world,
+even in warehouses, where wireless is used to keep track of inventory. Today, we can purchase
+nearly all types of products or board a flight with our cellular phones and tablets,
+thanks to wireless. Furthermore, homes, businesses, and even whole towns are now
+equipped with wireless networks that allow residents, employees, and visitors to access the
+Internet from anywhere using laptop computers, mobile phones, and tablets.
+Whether you are a manager who needs a better understanding of the impact of wireless
+communication devices, an IT professional looking to enhance your understanding of the
+field by learning more about wireless data communications, or a student taking an introductory
+course in this topic, Guide to Wireless Communications, Fourth Edition, will help you
+in that journey and prepare you for more in-depth learning.
+Approach
+Since the introduction, in mid-1995, of infrared data interfaces in laptop computers, which
+allowed two computers to communicate without wires, along with the publication, in 1997,
+of the first IEEE 802.11 wireless local area network standards, the field of wireless data communications has continued to expand at a dramatic pace. This book provides the reader
+with an in-depth introduction to wireless data communication technologies that are based on
+standards, along with others that are important components of today’s wireless world. The
+text covers the basics of radio frequency transmissions, transmitters, receivers, antennas,
+IEEE 802.15.1 and Bluetooth, IEEE 802.15.4 and ZigBee standards for low-rate wireless personal
+area networks, IEEE 802.11a/b/g/n/ac/ad and the upcoming /ax and /ay standards for
+wireless local area networking (Wi-Fi), IEEE 802.16 (WiMAX) and Free Space Optics (infrared)
+wireless metropolitan area networks, the evolution of cellular technology all the way to
+5G and satellite wireless wide area networks, and, finally, radio frequency identification
+(RFID) and near field communication (NFC). Many aspects of coexistence (the ability of
+two or more of these technologies to work in the same physical space) are also discussed, as
+are the basics of implementation and security issues for each of the mentioned technologies,
+along with a comprehensive tour of the various business and residential applications of wireless
+technologies in Chapter 12.
+Using straightforward language, this text introduces the most important technical aspects of each
+technology and can be used in classroom settings in technical colleges, early year university
+courses, or for distance education. It features extensive linking to websites where the reader can
+find additional materials. Please note, however, that although the URLs for some of these sites
+were accurate at the time this book was printed, these web resources can change frequently.
+This text’s pedagogical materials include Real-World Exercises, which further your learning
+outside the classroom setting, and Hands-On Projects, which take you through the often
+step-by-step process of performing tasks relevant to working in wireless communications. The
+Hands-On Projects, which can be performed in the lab or at home, use inexpensive,
+consumer-class equipment as well as freeware and demo versions of popular software. Finally,
+there are Challenge Case Projects, team-based research projects that help expand the students’
+knowledge of the technologies discussed and direct them to additional learning resources.

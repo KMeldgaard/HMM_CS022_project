@@ -10,7 +10,12 @@ import numpy as np
 
 class Latin_observations:
     def __init__(self, input_path=""):
-        file = open(input_path)
+        try:
+            file = open(input_path)
+        except IOError:
+            print("Input file wrong!")
+            exit(1)
+
         i_str = file.read().replace("\n", ' ')
         # print(i_str)    # debud
         i_str = i_str.lower()
@@ -33,5 +38,5 @@ class Latin_observations:
 
 
 # test
-o = Latin_observations("test_text.txt")
+o = Latin_observations("guide_to_wireless_intro.txt")
 print(o.obs)

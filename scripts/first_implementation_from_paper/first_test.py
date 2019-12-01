@@ -13,6 +13,9 @@ sequence_syms = {
 # import all the shit
 import numpy as np
 from hmm import HMM
+import pandas as pd
+pd.set_option('display.max_columns', None)  # or 1000
+pd.set_option('display.max_rows', None)  # or 1000
 from matplotlib import pyplot
 from observation import Latin_observations
 from alpha_pass_Copy_With_Changes import alpha_pass
@@ -28,9 +31,11 @@ max_iteration = 1000
 old_log_prob = -float('inf')
 log_prob_history = np.array(old_log_prob, dtype=float)
 
-model = HMM(2,27)
+init_model = HMM(2, 27)
 obs = Latin_observations('test_text.txt')
-init_model = model
+model = init_model
+
+B_res = pd.DataFrame(model.B)
 
 for iteration in range(max_iteration):
     # alpha pass
@@ -60,8 +65,18 @@ for iteration in range(max_iteration):
         break
 
 # view some results:
-print("Model:\nA:\n", init_model.A, "\nB:\n", init_model.B, "\npi:\n", init_model.pi)
-print("Model:\nA:\n", model.A, "\nB:\n", model.B, "\npi:\n", model.pi)
+# print("Model:\nA:\n", init_model.A, "\nB:\n", init_model.B, "\npi:\n", init_model.pi)
+# print("Model:\nA:\n", model.A, "\nB:\n", model.B, "\npi:\n", model.pi)
+
+# nice pandas display
+col_names = [chr(c) for c in range(ord('a'), ord('z')+1)]
+col_names.append('space')
+# append B result
+B_res = B_res.append(pd.DataFrame(model.B))
+B_res.columns = col_names
+B_res_trans = B_res.transpose()
+# print(B_res)
+print(B_res_trans)
 
 pyplot.plot(range(len(log_prob_history)), log_prob_history.tolist())
 pyplot.show()
