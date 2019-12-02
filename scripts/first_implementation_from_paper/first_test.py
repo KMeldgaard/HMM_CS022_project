@@ -5,10 +5,9 @@
 
 # consts:
 sequence_syms = {
-    'a': 0, 'o': 1, 'u': 2, 'i': 3, 'e': 4, 'y': 5, 'b': 6, 'c': 7, 'd': 8, 'f': 9, 'g': 10, 'h': 11, 'j': 12,\
-    'k': 13, 'l': 14, 'm': 15, 'n': 16, 'p': 17, 'q': 18, 'r': 19, 's': 20, 't': 21, 'v': 22, 'x': 23, 'z': 24, 'w': 25,\
+    'a': 0, 'o': 1, 'u': 2, 'i': 3, 'e': 4, 'y': 5, 'b': 6, 'c': 7, 'd': 8, 'f': 9, 'g': 10, 'h': 11, 'j': 12, \
+    'k': 13, 'l': 14, 'm': 15, 'n': 16, 'p': 17, 'q': 18, 'r': 19, 's': 20, 't': 21, 'v': 22, 'x': 23, 'z': 24, 'w': 25, \
     ' ': 26}
-
 
 # import all the shit
 import numpy as np
@@ -20,6 +19,7 @@ from beta_pass import beta_pass
 from log_prob import compute_logprob
 from ForwardBackward import Forward_Backward
 import logging
+
 mpl_logger = logging.getLogger('matplotlib')
 mpl_logger.setLevel(logging.WARNING)
 
@@ -28,7 +28,7 @@ max_iteration = 1000
 old_log_prob = -float('inf')
 log_prob_history = np.array(old_log_prob, dtype=float)
 
-model = HMM(2,27)
+model = HMM(2, 27)
 obs = Latin_observations('test_text.txt')
 init_model = model
 

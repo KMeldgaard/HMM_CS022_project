@@ -1,2 +1,7 @@
-We are currently trying to release a new product and my R&D team is pushing to get our product certified.
-We will be busy for the next week.
+A career in data offers the best of both worlds. On the one hand, it is a secure
+choice—demand for data talent continues to increase, and shows no sign of abating. With
+data skills in your toolkit, you’re going to be in demand in virtually any industry. On the
+other hand, it’s a brave new world out there. We’re producing massive amounts of data,
+and that data is making amazing new things possible. But, the methods and strategies
+we’re having to continually invent to harness all that data means the future is continually
+being redefined in real time.

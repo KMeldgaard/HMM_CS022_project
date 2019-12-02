@@ -3,70 +3,16 @@ By Zalasyu
 """
 import numpy as np
 
-"""
-T = length of the observation sequence
-N = number of states in the model
-M = number of observation symbols
-Q = {q0, q1, . . . , qN−1} = distinct states of the Markov process
-V = {0, 1, . . . , M − 1} = set of possible observations
-A = state transition probabilities
-B = observation probability matrix
-π = initial state distribution
-O = (O0, O1, . . . , OT −1) = observation sequence.
-i = S_i (present state)
-j = S_j (state after transition)
-"""
-"""Used to understand our raw inputs."""
-# From Kasper Observation sequence (Implicit conversion
-"""
-emission probabilities: numpy matrix of shape (N, |V|) (where |V| is the size of the vocabulary)
-where entry (j, o) has emis_j(o).
-    
-
-forward and backward probabilities: numpy matrix of shape (N, T) where entry (s, t) has forward probability
-for state s and observation t
-"""
-
-#  Need Forward Algorithim => P(o1,o2 ...ot, qt = j | λ)
-#       qt = j means “the t^th state in the sequence of states is state j”
-"""
-1. Initialization:
-    α1(j) = πj*bj(o1) 1 ≤ j ≤ N
-2. Recursion:
-    αt(j) = N_Sigma_i=1( αt−1(i) * aij * bj(ot)) 1 ≤ j ≤ N,1 < t ≤ T
-3. Termination:
-    P(O|λ) = N_Sigma_i=1(αT(i))   <= Critical!!!!!!
-
-"""
-
-#  Need Backward Probability => P(o_t+1,o_t+2....oT | q_t=Si , λ)
-# starting in state Si at time t and generating the rest of the observation sequence ot+1,..., oT.
-"""
-1. Initialization:
-    Beta_T(i) = 1,  1 ≤ i ≤ N
-2. Recursion:
-    beta_t(i) = N_Sigma_j=1( aij * bj(o_t+1) * Beta_t+1(j) )
-3. Termination:
-    P(O|λ) = N_sigma_j=1( πj * bj(o1) * β1(j) ) 
-
-"""
-
 
 # P(O|λ) = N_Sigma_i=1(αT(i)) <= Denominator <= From Kasper's return should be that stored in variable alpha??
-# But this ^^^^^^^^^^^^^^^^^^  is Dynamic with each new trans matrix made.... right??
-# Also it is normalized. due to scaling block.....
-# The denominator can be computed in many different ways, all producing the same result.
 
 def Forward_Backward(N, alpha, beta, test_sequence, sequence_syms, transition, emission):
     """Expectation Step"""
 
     # Initialize denominator:
-    P_O_given_model = np.sum(alpha)  # alpha matrix from Kasper.
-    # This will do the following mathematical operation =>N_Sigma_i=1(αT(i)) to get the total probability that the
-    # current Aij will output the observation sequence. Therefore, a scalar must be outputted above.
+    P_O_given_model = np.sum(alpha)
 
-    di_gamma = []  # Zt = a list of T matrices of size (N,N) The probability of being in state s_i at time t and
-    # transiting to state s_j at time t=1
+    di_gamma = []
     # Computing di_gamma
     for t in range(len(test_sequence) - 1):  # Creates index list
         obs_idx = test_sequence[t + 1]
@@ -80,7 +26,7 @@ def Forward_Backward(N, alpha, beta, test_sequence, sequence_syms, transition, e
 
     # Computing gamma. To adjust the model parameters to best fit the observations.
     # Gamma_t(i) = sum(gamma(i,j)
-    gamma = np.zeros((N +2, len(test_sequence)))
+    gamma = np.zeros((N, len(test_sequence)))
     for t in range(len(test_sequence) - 1):
         for s_i in range(N):
             gamma[s_i, t] = sum([di_gamma[t][s_i, s_j] for s_j in range(N)])
@@ -89,8 +35,7 @@ def Forward_Backward(N, alpha, beta, test_sequence, sequence_syms, transition, e
             gamma[s_j, len(test_sequence) - 1] = sum([di_gamma[t][s_i, s_j] for s_i in range(N)])
 
     """ Maximization Step """
-    start_probs = np.array([gamma[s_i, 0] for s_i in range(N)])  # Heuristic Search for global maximum. This will be
-    # used if the fow&back function is called again. (aka gamma_0(j))
+    start_probs = np.array([gamma[s_i, 0] for s_i in range(N)])
 
     # re-estimate emis probabilities
     emis = np.zeros((N, len(sequence_syms)))
