@@ -16,7 +16,9 @@ class Latin_observations:
             print("Input file wrong!")
             exit(1)
 
-        i_str = file.read().replace("\n", ' ').replace(",", '').replace("(", '').replace(")", '').replace("/", '')
+        i_str =\
+            file.read().replace("\n", ' ').replace(",", '').replace("(", '')\
+                .replace(")", '').replace("/", '').replace("!", '')
         i_str = i_str.strip(string.punctuation)
         i_str = i_str.strip(string.digits)
         # print(i_str)    # debug

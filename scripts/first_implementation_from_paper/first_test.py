@@ -27,17 +27,21 @@ mpl_logger = logging.getLogger('matplotlib')
 mpl_logger.setLevel(logging.WARNING)
 
 # Initialize calculation
-max_iteration = 1000
+max_iteration = 250
 old_log_prob = -float('inf')
 log_prob_history = np.array(old_log_prob, dtype=float)
 
 init_model = HMM(2, 27)
-obs = Latin_observations('test_text.txt')
+obs = Latin_observations('guide_to_wireless_intro.txt')
 model = init_model
 
 B_res = pd.DataFrame(model.B)
 
 for iteration in range(max_iteration):
+    if iteration == max_iteration-1:
+        print("MAX ITERATIONS DONE! (", max_iteration, ")")
+    if iteration % 10 == 0:
+        print("ITERATION", iteration)
     # alpha pass
     alpha, c = alpha_pass(model, obs)
 
@@ -61,7 +65,7 @@ for iteration in range(max_iteration):
         old_log_prob = new_log_prob
         continue
     else:
-        print("STOPPED AT ITERATION:", iteration)
+        print("STOPPED AT ITERATION:", iteration+1)
         break
 
 # view some results:
