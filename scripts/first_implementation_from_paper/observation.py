@@ -6,13 +6,22 @@
     obs: observation sequence mapped ti integers"""
 
 import numpy as np
-
+import string
 
 class Latin_observations:
     def __init__(self, input_path=""):
-        file = open(input_path)
-        i_str = file.read().replace("\n", ' ')
-        # print(i_str)    # debud
+        try:
+            file = open(input_path)
+        except IOError:
+            print("Input file wrong!")
+            exit(1)
+
+        i_str =\
+            file.read().replace("\n", ' ').replace(",", '').replace("(", '')\
+                .replace(")", '').replace("/", '').replace("!", '')
+        i_str = i_str.strip(string.punctuation)
+        i_str = i_str.strip(string.digits)
+        # print(i_str)    # debug
         i_str = i_str.lower()
         # print(i_str)    # debug
         # map input characters to integers
@@ -33,5 +42,5 @@ class Latin_observations:
 
 
 # test
-o = Latin_observations("test_text.txt")
-print(o.obs)
+o = Latin_observations("guide_to_wireless_intro.txt")
+# print(o.obs)

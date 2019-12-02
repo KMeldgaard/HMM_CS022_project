@@ -5,13 +5,17 @@
 
 # consts:
 sequence_syms = {
-    'a': 0, 'o': 1, 'u': 2, 'i': 3, 'e': 4, 'y': 5, 'b': 6, 'c': 7, 'd': 8, 'f': 9, 'g': 10, 'h': 11, 'j': 12, \
-    'k': 13, 'l': 14, 'm': 15, 'n': 16, 'p': 17, 'q': 18, 'r': 19, 's': 20, 't': 21, 'v': 22, 'x': 23, 'z': 24, 'w': 25, \
+    'a': 0, 'o': 1, 'u': 2, 'i': 3, 'e': 4, 'y': 5, 'b': 6, 'c': 7, 'd': 8, 'f': 9, 'g': 10, 'h': 11, 'j': 12,\
+    'k': 13, 'l': 14, 'm': 15, 'n': 16, 'p': 17, 'q': 18, 'r': 19, 's': 20, 't': 21, 'v': 22, 'x': 23, 'z': 24, 'w': 25,\
     ' ': 26}
+
 
 # import all the shit
 import numpy as np
 from hmm import HMM
+import pandas as pd
+pd.set_option('display.max_columns', None)  # or 1000
+pd.set_option('display.max_rows', None)  # or 1000
 from matplotlib import pyplot
 from observation import Latin_observations
 from alpha_pass_Copy_With_Changes import alpha_pass
@@ -19,20 +23,25 @@ from beta_pass import beta_pass
 from log_prob import compute_logprob
 from ForwardBackward import Forward_Backward
 import logging
-
 mpl_logger = logging.getLogger('matplotlib')
 mpl_logger.setLevel(logging.WARNING)
 
 # Initialize calculation
-max_iteration = 1000
+max_iteration = 250
 old_log_prob = -float('inf')
 log_prob_history = np.array(old_log_prob, dtype=float)
 
-model = HMM(2, 27)
-obs = Latin_observations('test_text.txt')
-init_model = model
+init_model = HMM(2, 27)
+obs = Latin_observations('guide_to_wireless_intro.txt')
+model = init_model
+
+B_res = pd.DataFrame(model.B)
 
 for iteration in range(max_iteration):
+    if iteration == max_iteration-1:
+        print("MAX ITERATIONS DONE! (", max_iteration, ")")
+    if iteration % 10 == 0:
+        print("ITERATION", iteration)
     # alpha pass
     alpha, c = alpha_pass(model, obs)
 
@@ -56,12 +65,25 @@ for iteration in range(max_iteration):
         old_log_prob = new_log_prob
         continue
     else:
-        print("STOPPED AT ITERATION:", iteration)
+        print("STOPPED AT ITERATION:", iteration+1)
         break
 
 # view some results:
-print("Model:\nA:\n", init_model.A, "\nB:\n", init_model.B, "\npi:\n", init_model.pi)
-print("Model:\nA:\n", model.A, "\nB:\n", model.B, "\npi:\n", model.pi)
+# print("Model:\nA:\n", init_model.A, "\nB:\n", init_model.B, "\npi:\n", init_model.pi)
+# print("Model:\nA:\n", model.A, "\nB:\n", model.B, "\npi:\n", model.pi)
+
+# nice pandas display
+col_names = [chr(c) for c in range(ord('a'), ord('z')+1)]
+col_names.append('space')
+# append B result
+B_res = B_res.append(pd.DataFrame(model.B))
+B_res = B_res.round(5)
+B_res.columns = col_names
+B_res_trans = B_res.transpose()
+# print(B_res)
+print(B_res_trans)
+# export to excel
+B_res.to_csv('export.csv', index=None)
 
 pyplot.plot(range(len(log_prob_history)), log_prob_history.tolist())
 pyplot.show()
