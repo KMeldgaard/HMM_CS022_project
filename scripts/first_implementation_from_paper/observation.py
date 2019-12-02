@@ -2,8 +2,8 @@
     observation.py - 30-10-2019
     Author: Kasper Meldgaard
     #
-    Observations are mapped to integers to represent them acording to a lookup table.
-    obs: observation sequence mapped ti integers"""
+    Observations are mapped to integers to represent them.
+    obs: observation sequence mapped to integers"""
 
 import numpy as np
 import string
@@ -16,23 +16,27 @@ class Latin_observations:
             print("Input file wrong!")
             exit(1)
 
+        # clean up input text to only contain letters and 'space'
         i_str =\
             file.read().replace("\n", ' ').replace(",", '').replace("(", '')\
                 .replace(")", '').replace("/", '').replace("!", '')
         i_str = i_str.strip(string.punctuation)
         i_str = i_str.strip(string.digits)
+
         # print(i_str)    # debug
         i_str = i_str.lower()
         # print(i_str)    # debug
+
         # map input characters to integers
-        self.obs = np.array(list(map(lambda i: (ord(i) - ord('a')) if ord(i) in list(range(ord('a'), \
-                                                                                           (ord('z') + 1))) else 26,
-                                     i_str)))
+        self.obs = np.array(list(map(lambda i: (ord(i) - ord('a'))\
+            if ord(i) in list(range(ord('a'), (ord('z') + 1))) else 26, i_str)))
+
         self.num_obs = len(self.obs)
 
     def get_num_obs(self):
         return self.num_obs
 
+    """ magic method to get number of observations in instance"""
     def __len__(self):  # same as get_num_obs()
         return len(self.obs)
 

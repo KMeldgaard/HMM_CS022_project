@@ -1,13 +1,6 @@
 """ HMM class
     hmm.py - 28-10-2019
     Author: Kasper Meldgaard
-    #--#
-    HMM class holds a hidden markov model (lambda) parameters.
-    -N:  Number of states in model
-    -M:  Number of different observations
-    +A:  State transition matrix
-    +B:  Observation probability matrix
-    +pi: initial state
     """
 
 DEBUG = "DEBUG:"
@@ -16,7 +9,7 @@ DEBUG = "DEBUG:"
 import numpy as np
 import logging
 
-# DEBUG: on / off
+# DEBUG: on / off - can be ignored
 A_debug = logging.getLogger("A_debug")
 B_debug = logging.getLogger("B_debug")
 pi_debug = logging.getLogger("pi_debug")
@@ -28,6 +21,14 @@ B_debug.disabled = True
 pi_debug.disabled = True
 
 
+""" HMM class holds a hidden markov model (lambda) parameters.
+    :param
+    -N:  Number of states in model
+    -M:  Number of different observations
+    :var
+    +A:  State transition matrix
+    +B:  Observation probability matrix
+    +pi: initial state"""
 class HMM:
     def __init__(self, N, M):
         self.__N__ = N
@@ -52,9 +53,14 @@ class HMM:
             print(ex.__DESCRIPTION__)
             exit(1)
 
-
+    """ function creates a stochastic row of length l
+        :parameter
+        l - length
+        row_debug - for debugging purpose
+        :return
+        list of length l
+        """
     def __random_row__(self, l, row_debug):
-        """Creates a row of l numbers with value normally distributed around 1/l"""
         while True:
             # row = np.random.normal(loc=1 / l, scale=0.015, \
                                    # size=(l - 1))  # normally distribute values around 1/l except last value
@@ -73,10 +79,15 @@ class HMM:
             if sum(row) == 1:
                 break
         return row.tolist()  # a stochastic row of lenght l
-
+    """ :return
+        __N__
+        """
     def get_N(self):
         return self.__N__
 
+    """ :return
+        __M__
+        """
     def get_M(self):
         return self.__M__
 

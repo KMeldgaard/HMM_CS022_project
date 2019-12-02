@@ -14,8 +14,6 @@ sequence_syms = {
 import numpy as np
 from hmm import HMM
 import pandas as pd
-pd.set_option('display.max_columns', None)  # or 1000
-pd.set_option('display.max_rows', None)  # or 1000
 from matplotlib import pyplot
 from observation import Latin_observations
 from alpha_pass_Copy_With_Changes import alpha_pass
@@ -23,19 +21,26 @@ from beta_pass import beta_pass
 from log_prob import compute_logprob
 from ForwardBackward import Forward_Backward
 import logging
+
 mpl_logger = logging.getLogger('matplotlib')
 mpl_logger.setLevel(logging.WARNING)
+
+pd.set_option('display.max_columns', None)  # or 1000
+pd.set_option('display.max_rows', None)  # or 1000
+# ------------------ #
 
 # Initialize calculation
 max_iteration = 250
 old_log_prob = -float('inf')
 log_prob_history = np.array(old_log_prob, dtype=float)
 
-init_model = HMM(2, 27)
+model = HMM(2, 27)
 obs = Latin_observations('guide_to_wireless_intro.txt')
-model = init_model
+# obs = Latin_observations('test_text.txt')
 
 B_res = pd.DataFrame(model.B)
+A_res = pd.DataFrame(model.A)
+pi_res = pd.DataFrame(model.pi)
 
 for iteration in range(max_iteration):
     if iteration == max_iteration-1:
@@ -68,10 +73,7 @@ for iteration in range(max_iteration):
         print("STOPPED AT ITERATION:", iteration+1)
         break
 
-# view some results:
-# print("Model:\nA:\n", init_model.A, "\nB:\n", init_model.B, "\npi:\n", init_model.pi)
-# print("Model:\nA:\n", model.A, "\nB:\n", model.B, "\npi:\n", model.pi)
-
+"""view some results:"""
 # nice pandas display
 col_names = [chr(c) for c in range(ord('a'), ord('z')+1)]
 col_names.append('space')
@@ -80,8 +82,16 @@ B_res = B_res.append(pd.DataFrame(model.B))
 B_res = B_res.round(5)
 B_res.columns = col_names
 B_res_trans = B_res.transpose()
+# append A & pi result
+A_res = A_res.append(pd.DataFrame(model.A))
+A_res.columns = ['0', '1']
+print("A matrix:\n", A_res)
+
+pi_res = pi_res.append(pd.DataFrame(model.pi))
+print("pi matrix:\n", pi_res)
+
 # print(B_res)
-print(B_res_trans)
+print("B matrix:\n", B_res_trans)
 # export to excel
 B_res.to_csv('export.csv', index=None)
 
