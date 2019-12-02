@@ -49,6 +49,6 @@ def alpha_pass(model, obs_seq):
         c[t] = 1 / c[t]
         for i in range(model.get_N()):
             alpha[i, t] *= c[t]
-            # end scale
+        # end scale
 
     return alpha, c

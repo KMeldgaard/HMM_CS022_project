@@ -30,7 +30,7 @@ pd.set_option('display.max_rows', None)  # or 1000
 # ------------------ #
 
 # Initialize calculation
-max_iteration = 250
+max_iteration = 100
 old_log_prob = -float('inf')
 log_prob_history = np.array(old_log_prob, dtype=float)
 
@@ -60,6 +60,7 @@ for iteration in range(max_iteration):
     # update model
     model.A = trans
     model.B = emis
+    model.pi = start_probs
 
     # compute lob probs
     new_log_prob = compute_logprob(obs, c)
