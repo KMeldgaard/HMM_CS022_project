@@ -42,3 +42,60 @@ Hands-On Projects, which can be performed in the lab or at home, use inexpensive
 consumer-class equipment as well as freeware and demo versions of popular software. Finally,
 there are Challenge Case Projects, team-based research projects that help expand the students’
 knowledge of the technologies discussed and direct them to additional learning resources.
+Guide to Wireless Communications, Fourth Edition, is designed to meet the needs of students
+and professionals who want to gain a better understanding of the fundamental concepts, scope,
+and issues surrounding the implementation of wireless data communications technologies. The
+text assumes a basic knowledge of computers and networks at CompTIA A+ and Network+
+levels. The pedagogical features provide a realistic, interactive learning experience to help prepare
+students for the challenges of working in the field of wireless data communications.
+Chapter 1, Introduction to Wireless Communications, provides an overview of a range of
+applications of wireless data communications in personal, local, metropolitan, and wide
+area networks. This chapter also looks at some of the advantages and challenges of wireless
+data communications.
+Chapter 2, Wireless Data Transmission, introduces you to wireless data transmission
+techniques by discussing various techniques used with infrared light and radio waves to
+transmit data without wires.
+xiv Introduction
+Copyright 2017 Cengage Learning. All Rights Reserved. May not be copied, scanned, or duplicated, in whole or in part. WCN 02-200-203
+Chapter 3, Radio Frequency Communications, looks at the individual component blocks
+used in the design of radio systems and how they are used to transmit data. It also provides
+an overview of standards and their role in the wireless data communications industry,
+which is important knowledge for anyone working in the industry.
+Chapter 4, How AntennasWork, takes a simplified but in-depth look at antennas and the
+important role they have in the successful implementation of a wireless data communications
+system.
+Chapter 5, Wireless Personal Area Networks, looks at the first two technologies
+developed for short-range wireless data communications, Bluetooth and ZigBee (IEEE
+802.15.4).
+Chapter 6, Introduction to Wi-Fi WLANs, provides essential knowledge of the basics of
+Wi-Fi LANs by taking an in-depth look at the early design and implementation of IEEE
+802.11, Wi-Fi, and prepares the reader to learn about the more complex enhancements
+to the standard covered in later chapters.
+Chapter 7, Enhancing WLAN Performance, details all of the IEEE 802.11 amendments
+that have helped make WLAN performance competitive with wired LANs, from
+802.11a/g to 802.11ac and introduces 802.11ax and ay.
+Chapter 8, Expanding WLANs and WLAN Security, covers implementation enhancements
+that have been created to expand WLANs and make them easier to manage. It
+also introduces core WLAN security concepts.
+Chapter 9, Wireless Metropolitan Area Networks, is an introduction to Free Space
+Optics, microwave, and WiMAX, wireless technologies that can interconnect LANs, provide
+last-mile connectivity, and also make it possible to deploy data networks in remote
+areas, across and in between cities and even covering entire continents.
+Chapter 10, Wireless Wide Area Networks, takes a look at the evolution, design, and the
+basics of implementation of cellular networks, as well as satellite technologies and how
+these are used to extend the reach of wireless data communications networks across the
+entire world.
+Chapter 11, Radio Frequency Identification and Near Field Communication, describes
+the RFID technology that is being used today to help identify, count, and track everything
+from small packaged products to the entire contents of large warehouses automatically
+and without wires. It then introduces NFC, the technology that enables wireless payments
+such as Apple Pay, enables tap-to-pay using credit and debit cards, and can simplify the
+establishment of connections between devices like cellular phones, tablets, wireless speakers,
+cameras, and other devices.
+Chapter 12, Wireless Communications Everywhere, takes learners on a comprehensive
+tour of how wireless data communication technologies are being used today and introduces
+some potential future applications.
+Appendix A, Completing Hands-On Projects Using Windows 10, outlines some of the
+differences between the text’s Hands-On Projects in Microsoft Windows 7 and completing
+them using Windows 10 to guide users who might be using the latest version of the
+operating system.

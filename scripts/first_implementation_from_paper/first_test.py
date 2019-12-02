@@ -73,10 +73,13 @@ col_names = [chr(c) for c in range(ord('a'), ord('z')+1)]
 col_names.append('space')
 # append B result
 B_res = B_res.append(pd.DataFrame(model.B))
+B_res = B_res.round(5)
 B_res.columns = col_names
 B_res_trans = B_res.transpose()
 # print(B_res)
 print(B_res_trans)
+# export to excel
+B_res.to_csv('export.csv', index=None)
 
 pyplot.plot(range(len(log_prob_history)), log_prob_history.tolist())
 pyplot.show()
